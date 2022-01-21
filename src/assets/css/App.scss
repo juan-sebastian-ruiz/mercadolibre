@@ -1,0 +1,172 @@
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eff0f0;
+}
+
+.app {
+  margin: 0;
+  font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
+    Arial, sans-serif;
+}
+
+.link-area {
+  text-decoration: none;
+}
+
+.btn-default {
+  background-color: #4b8cfe;
+  color: white;
+  width: 50%;
+  padding: 10px 20px;
+  border: 1px solid #213d6e;
+  border-style: none;
+  border-radius: 3px;
+}
+
+.header {
+  width: 100%;
+  padding: 10px;
+  background-color: #faec00;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  .logo {
+    width: 50px;
+    max-width: 100%;
+    margin-right: 25px;
+  }
+
+  .search-box {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    border: none;
+
+    input {
+      border: none;
+      width: 100%;
+      padding: 8px 10px;
+    }
+
+    .btn-search {
+      border: none;
+      padding: 0px 4px;
+      background-color: #f0eff2;
+      text-decoration: none;
+      cursor: pointer;
+
+      span {
+        display: block;
+        padding: 4px 0px;
+        color: #646662;
+      }
+    }
+  }
+}
+
+.container {
+  width: 75%;
+  margin: 40px auto 0px auto;
+  background-color: white;
+  padding: 18px 14px;
+}
+
+.divider {
+  border-top: 1px solid #eff0f0;
+  margin: 10px auto;
+}
+
+.search-result {
+  color: #333;
+  display: flex;
+  flex-wrap: wrap;
+
+  img {
+    width: 160px;
+    height: 160px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+  .search-result-info {
+    box-sizing: border-box;
+    padding: 0px 18px;
+
+    .price {
+      font-size: 24px;
+      font-weight: 400;
+    }
+    .title {
+      font-size: 20px;
+      font-weight: 300;
+    }
+  }
+  span {
+    padding-top: 40px;
+    margin-left: auto;
+    font-weight: 300;
+  }
+}
+
+.item-detail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  img {
+    max-width: 400px;
+  }
+
+  .item-detail-title {
+    max-width: 40%;
+    p.title {
+      font-size: 20px;
+    }
+    p.price {
+      font-size: 35px;
+    }
+  }
+
+  .item-detail-description {
+    margin-top: 100px;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .search-result {
+    img {
+      width: 35%;
+    }
+    .search-result-info {
+      width: 65%;
+      .price {
+        font-size: 24px;
+      }
+      .title {
+        font-size: 14px;
+      }
+    }
+    span {
+      padding: 0px 18px;
+      margin-right: 0;
+    }
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
