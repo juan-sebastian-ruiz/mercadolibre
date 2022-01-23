@@ -8,7 +8,7 @@ export default function SearchAPI(props) {
     const [searchResults, setSearchResults] = useState({})
 
     useEffect(() => {
-        const q = new URLSearchParams(location).get('q');
+        const q = new URLSearchParams(location).get('search');
         const fetchData = async () => {
             const { data } = await axios.get(`https://api.mercadolibre.com/sites/MLA/search?q=${q}`)
             data.results = data.results.slice(0, 4);
