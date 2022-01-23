@@ -12,6 +12,8 @@ export default function AppRoutes(){
             <Route path="/" element={<Search/>} />
             <Route path="/items" element={<Items/>} />
             <Route path="/items/:id" element={<ItemDetail/>} />
+            <Route path="/api/items" element={<SearchAPI/>} />
+            <Route path="/api/items/:id" element={<ItemsAPI/>} />
             <Route path="*" element={<NotFound/>} />
         </Routes>
     );

@@ -4,7 +4,7 @@ import axios from "axios";
 
 export default function ItemsAPI(props) {
 
-    const { id } = useParams(); //MLA875518875
+    const { id } = useParams();
 
     const [item, setItem] = useState({})
 
@@ -48,7 +48,7 @@ export default function ItemsAPI(props) {
 
     return (
         <>
-            {item.length > 0 &&
+            {item.author !== undefined &&
                 <pre>{JSON.stringify(item)}</pre>
             }
         </>

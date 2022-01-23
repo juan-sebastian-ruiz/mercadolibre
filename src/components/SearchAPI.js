@@ -8,17 +8,16 @@ export default function SearchAPI(props) {
     const [searchResults, setSearchResults] = useState({})
 
     useEffect(() => {
-        const q = new URLSearchParams(location).get('search');
+        const urlSearchParams = new URLSearchParams(location);
+        const q = urlSearchParams.get('search') != null ? urlSearchParams.get('search') : urlSearchParams.get('q');
         const fetchData = async () => {
             const { data } = await axios.get(`https://api.mercadolibre.com/sites/MLA/search?q=${q}`)
             data.results = data.results.slice(0, 4);
             const items = normalizeData(data);
-            console.log(items);
 
             if (props.fetchData != undefined) {
                 props.fetchData(items);
             } else {
-                console.log('entro');
                 setSearchResults(items)
             }
         }

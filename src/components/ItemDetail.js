@@ -3,9 +3,7 @@ import ItemsAPI from "./ItemsAPI";
 import { useParams } from "react-router-dom";
 import Search from './Search';
 
-export default function ItemDetail(props) {
-
-    const { id } = useParams(); //MLA875518875
+export default function ItemDetail() {
 
     const [item, setItem] = useState({})
 
