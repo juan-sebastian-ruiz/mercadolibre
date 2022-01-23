@@ -1,5 +1,9 @@
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
+*{
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
@@ -23,7 +27,7 @@ body {
 .btn-default {
   background-color: #4b8cfe;
   color: white;
-  width: 50%;
+  width: 100%;
   padding: 10px 20px;
   border: 1px solid #213d6e;
   border-style: none;
@@ -120,6 +124,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 0 10px;
 
   img {
     max-width: 400px;
@@ -127,6 +132,7 @@ body {
 
   .item-detail-title {
     max-width: 40%;
+    padding: 10px 20px;
     p.title {
       font-size: 20px;
     }
@@ -136,9 +142,8 @@ body {
   }
 
   .item-detail-description {
-    margin-top: 100px;
+    margin-top: 70px;
     max-width: 100%;
-    text-align: center;
   }
 }
 
@@ -168,5 +173,13 @@ body {
 @media screen and (max-width: 600px) {
   .container {
     width: 100%;
+  }
+  .item-detail{
+    img {
+      max-width: 100%;
+    }
+    .item-detail-title {
+      max-width: 100%;
+    }
   }
 }

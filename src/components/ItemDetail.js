@@ -25,7 +25,7 @@ export default function ItemDetail(props) {
                         <button className="btn-default">Comprar</button>
                     </div>
                     <div className="item-detail-description">
-                        <h3>Descripción del producto</h3>
+                        <h2>Descripción del producto</h2>
                         <p>{item.description}</p>
                     </div>
                 </div>
