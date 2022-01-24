@@ -13,7 +13,9 @@ export default function Search() {
   const navigate = useNavigate();
   const search = (e) => {
     e.preventDefault();
-    navigate(`/items?search=${query}`, { replace: true });
+    if(query != ''){
+      navigate(`/items?search=${query}`, { replace: true });
+    }
   }
 
   return (
