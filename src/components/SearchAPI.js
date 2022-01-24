@@ -22,7 +22,7 @@ export default function SearchAPI(props) {
             }
         }
         fetchData()
-    }, []);
+    }, [location]);
 
     const normalizeData = (data) => {
         //const categories = getCategories(data.filters);

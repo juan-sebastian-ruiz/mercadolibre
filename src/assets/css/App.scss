@@ -48,8 +48,11 @@ body {
     margin-right: 25px;
   }
 
-  .search-box {
+  form{
     width: 65%;
+  }
+
+  .search-box {
     display: flex;
     align-items: center;
     border: none;
